@@ -1,0 +1,98 @@
+#meimg{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+  margin: auto;
+  border-radius: 60% 10% 50% 30%;
+}
+
+#intro{
+  position: relative;
+  top:5vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  /* background:red; */
+}
+
+#des{
+  top:5vh;
+  animation: animate 1s ease forwards;
+  margin: auto;
+  height: fit-content;
+  width: 70vw;
+  position: relative;
+  text-align: center;
+  line-height: 30px;
+  /* font-weight: bold; */
+  font-size: 135%;
+  font-family: monospace;
+}
+
+@keyframes animate {
+  0%{
+    line-height: 0;
+  }
+
+  100%{
+    line-height: 30px;
+  }
+}
+
+
+@media (max-width:768px) {
+  #meimg{
+    height: 150px;
+    width: 150px;
+  }
+
+  #des{
+    width: 90vw;
+    font-size: 120%;
+    
+  }
+}
+
+/* ************** PROJECTS **************** */
+#projectC{
+  display: flex;
+}
+
+#comingSoon{
+  padding: 10px;
+  border-radius: 10px;
+  margin: auto;
+  position: relative;
+  top:5vh;
+  font-size: 160%;
+  text-align: center;
+  font-family: monospace;
+}
+
+
+/* *********** SERVICES ************** */
+#services{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  position: relative;
+  top:5vh;
+}
+
+#services > div{
+  margin: auto;
+  width: 250px;
+  height: 110px;
+  text-align: center;
+  font-family: monospace;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px lightgray;
+  padding: 5px;
+  /* background: rgba(211, 211, 211, 0.515); */
+}
+
+#services > div > *{
+  text-decoration: none;
+}
