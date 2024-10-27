@@ -4,6 +4,8 @@ import Contact from './Components/Contact';
 import Home from './Components/Home';
 import Project from './Components/Project';
 import Services from './Components/Services';
+import ThankYouError from './Components/Sorry';
+import ThankYou from './Components/ThankYou';
 
 const App = () => {
   return (
@@ -27,6 +29,9 @@ const App = () => {
           <Route path="/project" element={<Project />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/thank-you" element={ <ThankYou/>}/>
+          <Route path='/error' element={<ThankYouError/>} />
+          <Route path="*" element={<ThankYouError/>} />
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
