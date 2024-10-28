@@ -1,41 +1,40 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 
-function sendMessage(e){
-    e.preventDefault();
-    const {email, name, message} = e.target.elements;
+// function SendMessage(e){
+//     e.preventDefault();
 
-    const jsonData = {
-        email: email.value, 
-        name: name.value,
-        message: message.value
-    } 
+//     const {email, name, message} = e.target.elements;
 
-    fetch("../server/mail.php", {
-        method:"POST", 
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify(jsonData)
-    })
+//     const jsonData = {
+//         email: email.value, 
+//         name: name.value,
+//         message: message.value
+//     } 
 
-    .then(res=>{
-        if(res.ok){
-            return res.json();
-        }
-        throw new Error("Network response was not ok")
-    }) 
+//     fetch("../../server/mail.php", {
+//         method:"POST", 
+//         headers:{'Content-Type':'application/json'},
+//         body:JSON.stringify(jsonData)
+//     })
 
-    .then(data=>{
-        console.log("success", data);
-        window.location.href = "/thank-you";
-    })
+//     .then(res=>{
+//         if(res.ok){
+//             return res.json();
+//         }
+//         throw new Error("Network response was not ok")
+//     }) 
 
-    .catch((error)=> {
-        console.error(error);
-        window.location.href = "/error";
-    })
+//     .then(data=>{
+//         console.log("success", data);
+//         window.location.href = "/thank-you";
+//     })
 
-
-}
+//     .catch((error)=> {
+//         console.error(error);
+//         window.location.href = "/error";
+//     })
+// }
 
 function Contact(){
     return (
@@ -70,10 +69,15 @@ function Contact(){
                 </div>
             </div>
 
-            <div id="dm">
+            <div id='mail'>
+                <h3>Send an email</h3> <br/>
+                <p>Want to use an email instead? No worried send it to:<br/>  <strong>placide@not-placide.com</strong>  </p>
+            </div>
+
+            {/* <div id="dm">
                 <fieldset>
                     <legend>Send a DM</legend>
-                    <form onSubmit={sendMessage}>
+                    <form onSubmit={SendMessage}>
                         <label>Email</label><br/>
                         <input required name="email" type="email"/> <br/><br/>
 
@@ -86,7 +90,7 @@ function Contact(){
                         <button type="submit">Send</button>
                     </form>
                 </fieldset>
-            </div>
+            </div> */}
             
 
         </div>

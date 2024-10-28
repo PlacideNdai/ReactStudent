@@ -58,7 +58,7 @@
   top: 10vh;
 }
 
-#error > button{
+#home{
   width: 50%;
   border:none;
 }
@@ -205,28 +205,15 @@ textarea{
   text-align: center;
   height: 15vh;
 }
-/* ******** SUCCESS ******** */
-#thankyou{
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" fill="none"><rect width="100%" height="100%" fill="%23fcfdfb"/><circle cx="100" cy="100" r="90" fill="%23f0f9f4"/><path d="M 50,100 L 90,150 L 150,50" stroke="%23a8e0d4" stroke-width="10" fill="none"/></svg>');
-  background-size: cover;
-  height: 50vh;
-  width: 50vw;
-  border-radius: 10px;
-  margin: auto;
+
+#mail{
   text-align: center;
-  color:rgb(29, 28, 28);
-  position: relative;
-  top: 10vh;
-}
-
-#thankyou > button{
-  width: 40%;
-  border: none;
-}
-
-#thankyou > *{
-  position: relative;
-  top:40%;
+  border:1px solid lightgray;
+  border-radius: 10px;
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  background:rgb(237, 237, 237);
 }
 
 /* ************ MOBILE ********** */

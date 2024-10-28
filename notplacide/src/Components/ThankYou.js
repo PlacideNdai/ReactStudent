@@ -1,5 +1,5 @@
 import React from "react";
-import GoHome from "./GohomeBtn";
+import GoHome from "./LocBtn";
 
 function ThankYou(){
     return (
